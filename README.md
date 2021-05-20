@@ -1,11 +1,11 @@
 # CreativeCode-NodeAPI-Challenge
 
-The challenge is to create an Typescript node API of User, Address, Session, JWT, Tests using an ORM to connect to Postgres.
+The challenge is to create a Typescript node API of User, Address, Session, JWT, Tests using an ORM to connect to Postgres.
 
-This application provides the creation, read for users, address and also the session for the user.
+This application provides the creation, read for users, address, and also the session for the user.
 
 
-- **Important** you need to create a userLogin and authenticate in order of test the address and user's routes.
+- **Important** you need to create a userLogin and authenticate to test the address and user's routes.
 
 
 ### :keyboard: Project's Setup and workaround
@@ -14,8 +14,6 @@ This application provides the creation, read for users, address and also the ses
 
 ```
 https://github.com/code36u4r60/ignite-desafio-corrigindo-o-codigo.git
-```
-
 ```
 
 - Open the project folder path in the terminal
@@ -68,8 +66,8 @@ sudo docker logs database-ccapi -f
 - To test the routes you can use insmonia, postman or open the path bellow:
 
 ```
-
 http://localhost:3333/api-docs
+```
 
 The routes are:
 
@@ -87,11 +85,7 @@ passing username: string and password: string
 /usersLogin
 passing username: string and password: string
 
-
-
-
-
-```
+-------------------------------------------------------
 
 - To run the application test you can use the comando:
 
