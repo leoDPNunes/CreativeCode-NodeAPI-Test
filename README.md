@@ -13,7 +13,7 @@ This application provides the creation, read for users, address, and also the se
 - Clone the repositoy bellow
 
 ```
-https://github.com/code36u4r60/ignite-desafio-corrigindo-o-codigo.git
+https://github.com/leoDPNunes/CreativeCode-NodeAPI-Test
 ```
 
 - Open the project folder path in the terminal
