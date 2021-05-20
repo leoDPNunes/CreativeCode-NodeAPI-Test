@@ -1,0 +1,215 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "CreativeCodeTest Documentation",
+        "description": "This is User's API",
+        "version": "1.0.0",
+        "contact": {
+            "email": "Leonardodpnunes@gmail.com"
+        }
+    },
+    "paths": {
+        "/users": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "Create an user",
+                "description": "Create a new user",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "cellphone": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "age": {
+                                        "type": "number"
+                                    },
+                                    "weight": {
+                                        "type": "number"
+                                    },
+                                    "ethnicity": {
+                                        "type": "enumarator"
+                                    }
+                                },
+                                "example": {
+                                    "name": "John Doe",
+                                    "cellphone": "21911223344",
+                                    "email": "JohnDoe@gmail.com",
+                                    "age": 30,
+                                    "weight": 80.5,
+                                    "ethnicity": "Caucasian"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "User already exists"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "User"
+                ],
+                "summary": "List all users",
+                "description": "List all users",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "cellphone": {
+                                                "type": "string"
+                                            },
+                                            "email": {
+                                                "type": "string"
+                                            },
+                                            "age": {
+                                                "type": "number"
+                                            },
+                                            "weight": {
+                                                "type": "number"
+                                            },
+                                            "ethnicity": {
+                                                "type": "enumerator"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/address": {
+            "post": {
+                "tags": [
+                    "Address"
+                ],
+                "summary": "Create an address",
+                "description": "Create a new address",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "definitions": {
+                                    "Address": {
+                                        "type": "object",
+                                        "properties": {
+                                            "address": {
+                                                "type": "string"
+                                            },
+                                            "cellphone": {
+                                                "type": "string"
+                                            },
+                                            "number": {
+                                                "type": "string"
+                                            },
+                                            "addressLine2": {
+                                                "type": "string"
+                                            },
+                                            "zipCode": {
+                                                "type": "string"
+                                            },
+                                            "city": {
+                                                "type": "string"
+                                            },
+                                            "state": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "example": {
+                                            "address": "College street",
+                                            "number": "1705",
+                                            "addressLine2": "suite 403",
+                                            "zipCode": "29208",
+                                            "city": "Columbia",
+                                            "state": "SC"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "address already assigned! Alter or Add a new one."
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Address"
+                ],
+                "summary": "List all address",
+                "description": "List all new address",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "address": {
+                                                "type": "string"
+                                            },
+                                            "cellphone": {
+                                                "type": "string"
+                                            },
+                                            "number": {
+                                                "type": "string"
+                                            },
+                                            "addressLine2": {
+                                                "type": "string"
+                                            },
+                                            "zipCode": {
+                                                "type": "string"
+                                            },
+                                            "city": {
+                                                "type": "string"
+                                            },
+                                            "state": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

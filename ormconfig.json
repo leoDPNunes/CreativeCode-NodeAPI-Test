@@ -1,0 +1,18 @@
+{
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "docker",
+    "password": "docker",
+    "database": "ccapibd",
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ],
+    "entities": [
+        "./src/modules/users/entities/*.ts",
+        "./src/modules/login/entities/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
+}

@@ -1,0 +1,31 @@
+version: "3.7"
+
+services:
+    database_ccapi:
+        image: postgres
+        container_name: database_ccapi
+        restart: always
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_USER=docker
+            - POSTGRES_PASSWORD=docker
+            - POSTGRES_DB=ccapibd
+        volumes:
+            - pgdata:/data/postgres
+    app:
+        build: .
+        container_name: app_ccapi
+        ports:
+            - 3333:3333
+        links:
+            - database_ccapi
+        depends_on:
+            - database_ccapi
+        volumes:
+            - .:/usr/app    
+
+
+volumes:
+    pgdata:
+        driver: local
